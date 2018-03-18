@@ -34,3 +34,21 @@ disableしておく必要がある。
 参考:
 
 1. [Blurry Text On Dell UltraSharp U3014](https://discussions.apple.com/thread/5049049)
+
+# 開発環境に関するあれこれ
+
+## python
+
+デフォルトでインストールされているバージョン以外にもいろいろ使いたい。
+仕事毎にpythonのライブラリの環境も分けたい。
+という要望があったので、pyenv + virtualenvで環境構築
+
+### pyenvのインストール
+
+### virtualenvのインストール
+
+### pyenv + virtualenvによるディレクトリ毎の環境構築
+
+## node.js
+
+node.jsでもpyenv + virtualenvのようなことをやりたいのでいろいろ調べてセットアップ。
