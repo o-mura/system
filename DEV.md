@@ -24,4 +24,5 @@ $ pyenv uninstall foo
 
 ## npm
 
-### nodebrew
+### nodebrew インストール
+
