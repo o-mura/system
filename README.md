@@ -49,6 +49,15 @@ disableしておく必要がある。
 
 ### pyenv + virtualenvによるディレクトリ毎の環境構築
 
+virtualenvにより既存環境をコピーして新規環境を作成して、カレントディレクトリでその環境を有効にする。
+
+```
+$ pyenv virtualenv 3.6.3 XXXX
+$ pyevn local XXXX
+```
+
+
+
 ## node.js
 
 node.jsでもpyenv + virtualenvのようなことをやりたいのでいろいろ調べてセットアップ。
