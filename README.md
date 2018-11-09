@@ -53,9 +53,19 @@ virtualenvにより既存環境をコピーして新規環境を作成して、�
 
 ```
 $ pyenv virtualenv 3.6.3 XXXX
-$ pyevn local XXXX
+$ pyenv local XXXX
 ```
 
+#### mojaveのときに躓いた点
+
+mojaveにアップデートしたらpyenv経由でpythonをインストールできなくなった。xcodeやxcodeのコマンドラインツールを再インストールしてもだめだった。
+結局、xcodeのコマンドラインツールのヘッダファイルにパスが通っていないのが原因だったので以下のようにしてあげればOK.
+
+```
+$ CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv  install 3.5.2
+```
+
+これでzlibがないとかのエラーはなくなる。
 
 
 ## node.js
