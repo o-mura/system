@@ -67,6 +67,12 @@ $ CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv  install 3.5.2
 
 これでzlibがないとかのエラーはなくなる。
 
+### python + tcltk
+
+pythonでtcltkを用いてUIを作成するには事前にtcltkのライブラリをインストールしてから、pythonをコンパイルする必要がある。
+事前にtcltkのライブラリをインストールしないとtcltkのpythonラッパー？であるtkinterがインストールされない。
+tcltkに関しては本家サイトからMacOSX用のパッケージをダウンロードしてインストールすればOK。
+
 
 ## node.js
 
