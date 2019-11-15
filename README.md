@@ -51,6 +51,31 @@ disableしておく必要がある。
 
 ### pyenv + virtualenvによるディレクトリ毎の環境構築
 
+virtualenvにより既存環境をコピーして新規環境を作成して、カレントディレクトリでその環境を有効にする。
+
+```
+$ pyenv virtualenv 3.6.3 XXXX
+$ pyenv local XXXX
+```
+
+#### mojaveのときに躓いた点
+
+mojaveにアップデートしたらpyenv経由でpythonをインストールできなくなった。xcodeやxcodeのコマンドラインツールを再インストールしてもだめだった。
+結局、xcodeのコマンドラインツールのヘッダファイルにパスが通っていないのが原因だったので以下のようにしてあげればOK.
+
+```
+$ CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv  install 3.5.2
+```
+
+これでzlibがないとかのエラーはなくなる。
+
+### python + tcltk
+
+pythonでtcltkを用いてUIを作成するには事前にtcltkのライブラリをインストールしてから、pythonをコンパイルする必要がある。
+事前にtcltkのライブラリをインストールしないとtcltkのpythonラッパー？であるtkinterがインストールされない。
+tcltkに関しては本家サイトからMacOSX用のパッケージをダウンロードしてインストールすればOK。
+
+
 ## node.js
 
 node.jsでもpyenv + virtualenvのようなことをやりたいのでいろいろ調べてセットアップ。
